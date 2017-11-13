@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+body{font-size:12px;}
+img{border:none;}
+li{list-style:none;}
+select,textarea{outline:none;border:none; background:none;}
+textarea{resize:none;}
+a{text-decoration:none; color:#656565;}
+
+
+.Qman_1{
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    color: rgb(165, 120, 120);
+    font-size: 22px;
+    z-index: 998;
+}
+.Qman_1 img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+}
+.Qman_1 h2{
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    line-height: 75px;
+    top: -30px;
+    right: -20px;
+    background: url(../img/littleBg-sy.png) no-repeat center center;
+    background-size: 100% 100%;
+    z-index: 999;
+    opacity: 0;
+    transition: all .8s ease;
+}
+.Qman_1 ul{
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: 20px;
+    width: 200px;
+    height: 200px;
+}
+.Qman_1 ul li{
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background: url("../img/littleBg-other.png") no-repeat center center;
+    background-size: 100% 100%;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.Qman_1 ul li a{
+    color: rgba(0, 0, 0, 0.8)
+}
+
+ul::before,ul::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+/* 蛋型盒子样式 */
+ul::before{
+    left: -26px;
+    transform-style: preserve-3d;
+    perspective: 10px;
+    top: 25px;
+    width: 250px;
+    height: 250px;
+    border: 5px solid yellowgreen;
+    transform: rotateX(75deg) rotateZ(44deg);
+    border-top: 0;
+    border-left: 0px;
+    box-shadow: 2px 2px 5px rgb(5, 65, 5);
+    transition: all .8s ease .6s;
+    opacity: 0;
+    z-index: 1010;
+}
+/* 横向盒子样式 */
+ul::after{
+    left: 0px;
+    top: -45px;
+    width: 200px;
+    height: 270px;
+    border: 1px solid black;
+    box-shadow: 0px 5px 6px #444;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    transition: all .8s ease;
+    opacity: 0;   
+    background: url("../img/bigBg-1.jpg") no-repeat center center;
+    background-size: 100% 100%;
+    
+}
+
+/* hover动画 */
+.Qman_1:hover ul li:nth-of-type(1){
+    left: -70px;
+    bottom: -50px;
+}
+.Qman_1:hover ul li:nth-of-type(2){
+    left: 0px;
+    bottom: -115px;
+}
+.Qman_1:hover ul li:nth-of-type(3){
+    left: 100px;
+    bottom: -115px;
+}
+.Qman_1:hover ul li:nth-of-type(4){
+    left: 170px;
+    bottom: -50px;
+}
+.main{
+    width: 100%;
+    height: 1000px;
+}
+.Qman_1:hover h2{
+    opacity: 1;
+    top: -60px;
+    right: -50px;
+    transform: scale(1);
+}
+.Qman_1:hover ul::before,.Qman_1:hover ul::after{
+    opacity: 1;
+}
+.Qman_1:hover ul li{
+    opacity: 1;
+}
