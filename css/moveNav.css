@@ -8,7 +8,9 @@ select,textarea{outline:none;border:none; background:none;}
 textarea{resize:none;}
 a{text-decoration:none; color:#656565;}
 
-
+body{
+    background: black;
+}
 .Qman_1{
     position: fixed;
     top: 100px;
